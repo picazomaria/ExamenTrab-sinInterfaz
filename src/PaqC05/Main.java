@@ -51,12 +51,12 @@ public class Main {
         for(int i= 0; i < 6; i++){
             puerto1.apilar(c2);
         }
-        System.out.println(hub1.toString());
-        System.out.println(puerto1.getEspacio(0));
-
-        System.out.println("Introduce el id del contenedor que desees");
-        int numID2 = sc.nextInt();
-        System.out.println(hub1.mostrarDatos(numID2));
+//        System.out.println(hub1.toString());
+//        System.out.println(puerto1.getEspacio(0));
+//
+//        System.out.println("Introduce el id del contenedor que desees");
+//        int numID2 = sc.nextInt();
+//        System.out.println(hub1.mostrarDatos(numID2));
 
         System.out.println("prueba check_aduanas");
         System.out.println(puerto1.check_aduana(10,0));

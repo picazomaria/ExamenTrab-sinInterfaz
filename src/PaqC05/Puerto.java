@@ -1,5 +1,5 @@
 package PaqC05;
-
+//María Picazo Sánchez
 import java.io.Serializable;
 
 public class Puerto implements Serializable {
@@ -77,7 +77,7 @@ public class Puerto implements Serializable {
             for(int j=0;j<12;j++){
                 if (P[hub].getM(i,j).getPeso()>=peso){
                     P[hub].getM(i,j).setInspeccionado(true);
-                    contenedores=contenedores+P[hub].getM(i,j)+"\n";
+                    contenedores=contenedores+" ID: "+P[hub].getM(i,j).getId()+" Emp. remitente: "+P[hub].getM(i,j).getEmpresaRemitente()+" Peso: "+P[hub].getM(i,j).getPeso()+" Aduanas: "+P[hub].getM(i,j).getInspeccionado()+"\n";
                 }
             }
         }
