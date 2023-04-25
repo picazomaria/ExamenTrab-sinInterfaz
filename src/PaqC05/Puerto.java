@@ -70,4 +70,17 @@ public class Puerto implements Serializable {
         }
         return null;
     }
+    //nuevo metodo de chequeado de aduanas
+    public String check_aduana(int peso,int hub){
+        String contenedores = "";
+        for(int i=0;i<10;i++){
+            for(int j=0;j<12;j++){
+                if (P[hub].getM(i,j).getPeso()>=peso){
+                    P[hub].getM(i,j).setInspeccionado(true);
+                    contenedores=contenedores+P[hub].getM(i,j)+"\n";
+                }
+            }
+        }
+        return contenedores;
+    }
 }

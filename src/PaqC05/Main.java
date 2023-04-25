@@ -11,13 +11,13 @@ public class Main {
         Contenedor[] cont = new Contenedor[15];
         Contenedor[] cont2 = new Contenedor[3];
         Contenedor[] cont3 = new Contenedor[15];
-        Contenedor c1 = new Contenedor(20, 120, "US", true, 3, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
-        Contenedor c2 = new Contenedor(21, 120, "US", true, 2, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
-        Contenedor c3 = new Contenedor(22, 120, "US", true, 1, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
+        Contenedor c1 = new Contenedor(20, 120, "US", false, 3, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
+        Contenedor c2 = new Contenedor(21, 120, "US", false, 2, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
+        Contenedor c3 = new Contenedor(22, 120, "US", false, 1, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
 
         for (int i = 0; i < 15; i++) {
-            cont[i] = new Contenedor(1 + i, i + 100, "US", true, 1, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
-            cont3[i] = new Contenedor(3 + i, i + 100, "US", true, 3, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
+            cont[i] = new Contenedor(1 + i, i + 100, "US", false, 1, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
+            cont3[i] = new Contenedor(3 + i, i + 100, "US", false, 3, "Contenedor Aliexpress", "Aliexpress send", "correos expres");
             hub1.apilar(cont[i]);
             hub1.apilar(cont3[i]);
         }
@@ -57,6 +57,9 @@ public class Main {
         System.out.println("Introduce el id del contenedor que desees");
         int numID2 = sc.nextInt();
         System.out.println(hub1.mostrarDatos(numID2));
+
+        System.out.println("prueba check_aduanas");
+        System.out.println(puerto1.check_aduana(10,0));
     }
 }
 
