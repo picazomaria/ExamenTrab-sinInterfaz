@@ -75,7 +75,7 @@ public class Puerto implements Serializable {
         String contenedores = "";
         for(int i=0;i<10;i++){
             for(int j=0;j<12;j++){
-                if (P[hub].getM(i,j).getPeso()>=peso){
+                if (P[hub].getM(i,j)!=null && P[hub].getM(i,j).getPeso()>=peso){
                     P[hub].getM(i,j).setInspeccionado(true);
                     contenedores=contenedores+" ID: "+P[hub].getM(i,j).getId()+" Emp. remitente: "+P[hub].getM(i,j).getEmpresaRemitente()+" Peso: "+P[hub].getM(i,j).getPeso()+" Aduanas: "+P[hub].getM(i,j).getInspeccionado()+"\n";
                 }
